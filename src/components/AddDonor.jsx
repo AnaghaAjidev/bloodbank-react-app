@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import NavBar from './NavBar'
 
 const AddDonor = () => {
 
@@ -25,7 +26,7 @@ const AddDonor = () => {
 
     console.log(input)
 
-    axios.post("//host-demo-app.onrender.com/api/add-donor",input).then(
+    axios.post("https://host-demo-app.onrender.com/api/add-donor",input).then(
       (response) => {
         console.log(response.data)
       }
@@ -33,7 +34,7 @@ const AddDonor = () => {
   }
   return (
     <>
-      
+      <NavBar />
 
       <div className="container mt-5">
         <div className="card shadow p-4">
